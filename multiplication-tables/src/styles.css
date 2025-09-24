@@ -1,0 +1,48 @@
+:root{
+  --accent: #4b39f7;   /* purple-ish button */
+  --text: #2b2b66;
+}
+
+*{box-sizing:border-box}
+html,body,#root{height:100%}
+body{font-family:Inter, system-ui, Arial; margin:0;background:#ffffff;color:var(--text)}
+.page{min-height:100vh;display:flex;flex-direction:column;align-items:center;padding:28px}
+
+/* header */
+.header{width:100%;max-width:900px;display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
+.title{font-size:20px;font-weight:700;color:var(--text)}
+.controls{font-size:14px;color:#555}
+.baseInput{margin-left:8px;padding:6px 8px;border-radius:6px;border:1px solid #ddd;width:72px}
+
+/* grid with two columns */
+.grid{width:100%;max-width:900px;display:grid;grid-template-columns:1fr 1fr;gap:36px}
+
+/* each column */
+.col{background:transparent;padding:6px}
+.nextBtn{
+  display:inline-block;
+  background:var(--accent);
+  color:white;
+  border:none;
+  padding:10px 20px;
+  border-radius:12px;
+  font-weight:600;
+  cursor:pointer;
+  margin-bottom:18px;
+  box-shadow: 0 6px 0 rgba(0,0,0,0.06);
+}
+.nextBtn:active{transform:translateY(2px);box-shadow:none}
+
+/* rows styling */
+.rows{display:flex;flex-direction:column;gap:18px}
+.row{font-size:28px;color:var(--text);font-weight:600}
+.equation{color:#3a2fbc}
+
+/* footer */
+.footer{margin-top:40px;color:#777}
+
+/* responsive */
+@media (max-width:800px){
+  .grid{grid-template-columns:1fr}
+  .page{padding:18px}
+}
